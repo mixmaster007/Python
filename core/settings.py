@@ -25,7 +25,7 @@ SECRET_KEY = env('SECRET_KEY', default='S#perS3crEt_007')
 DEBUG = env('DEBUG')
 
 # load production server from .env
-ALLOWED_HOSTS        = ['localhost', 'localhost:85', '127.0.0.1',               os.getenv('SERVER', '127.0.0.1') ]
+ALLOWED_HOSTS        = ['localhost','155.138.142.50:8000', 'localhost:85', '127.0.0.1',               os.getenv('SERVER', '127.0.0.1') ]
 CSRF_TRUSTED_ORIGINS = ['http://localhost:85', 'http://127.0.0.1', 'https://' + os.getenv('SERVER', '127.0.0.1') ]
 
 # Application definition
