@@ -23,6 +23,13 @@ class LoginForm(forms.Form):
                 "class": "form-control"
             }
         ))
+    capatchacode = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Capatcha:",
+                "class": "form-control"
+            }
+        ))
 
 
 class SignUpForm(UserCreationForm):
@@ -54,7 +61,15 @@ class SignUpForm(UserCreationForm):
                 "class": "form-control"
             }
         ))
+    capatchacode = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "Capatcha Code",
+                "class": "form-control"
+            }
+        ))
+
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ('username', 'email', 'password1', 'password2','capatchacode')

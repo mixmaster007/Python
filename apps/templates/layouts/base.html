@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Django Datta Able - {% block title %}{% endblock %} | AppSeed
+        TestAPP - {% block title %}{% endblock %} | AppSeed
     </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/static/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="/static/assets/css/style.css">
-
+    <link rel="stylesheet" href="/static/assets/css/my.css">
     <!-- Specific CSS goes HERE -->
     {% block stylesheets %}{% endblock stylesheets %}
 
@@ -43,14 +43,13 @@
             <div class="loader-fill"></div>
         </div>
     </div>    
-    
+     <!-- SideBar -->
+     {% include 'includes/sidebar.html' %}
     <!-- Top Bar -->
-    {% include 'includes/navigation.html' %}
-
-    <!-- SideBar -->
-    {% include 'includes/sidebar.html' %}
+      
 
     <div class="pcoded-main-container">
+        {% include "includes/navigation.html" %}
         <div class="pcoded-wrapper">
 
             {% block content %}{% endblock content %}
